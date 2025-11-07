@@ -1,6 +1,7 @@
 #SPDX-License-Identifier: MIT-0
 galaxy_info:
   role_name: snmpd
+  namespace: myckakamil
   author: Kamil Myćka
   description: Install and configure SNMP daemon
   company: your company (optional)
