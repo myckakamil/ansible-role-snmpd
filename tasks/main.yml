@@ -1,3 +1,10 @@
-#SPDX-License-Identifier: MIT-0
 ---
-# tasks file for ansible-role-snmpd
+- name: Update cache
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Install snmpd
+  ansible.builtin.apt:
+    name: snmpd
+    state: present
