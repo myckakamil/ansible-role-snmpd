@@ -1,7 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: true # Disable if your role does not rely on facts
+  gather_facts: false
   tasks:
     - name: Apply role under test
       ansible.builtin.include_role:
