@@ -1,0 +1,4 @@
+---
+snmp_community: public
+snmp_location: City
+snmp_email: mail@example.com
