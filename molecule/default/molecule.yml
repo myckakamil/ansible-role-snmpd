@@ -3,7 +3,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: "geerlingguy/docker-debian12-ansible:latest"
+    image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian13}-ansible:latest"
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
@@ -19,3 +19,13 @@ lint: |
   set -e
   yamllint .
   ansible-lint
+
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - create
+    - converge
+    - idempotence
+    - verify
+    - destroy
